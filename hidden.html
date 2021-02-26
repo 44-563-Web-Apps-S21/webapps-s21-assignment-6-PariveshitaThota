@@ -39,6 +39,67 @@ function resolveForm (){
 }
 </script>
 
+<script>
+<script> 
+var correct=0;
+var wrong=0;
+function processGuess(){
+    console.log("Getting form values")
+    age = document.getElementById("form1_age").value
+    nick = document.getElementById("form1_nick").value
+    
+    
+    out = document.getElementById("result")
+    if(age==nick){
+       
+        correct++;
+        alert("Congratulations");
+        out.innerHTML = "Result of secret will be shown"+" "+correct;
+    } else {
+     
+        wrong++;
+        alert("Sorry");
+        out.innerHTML = "Result of secret will be shown"+" "+  wrong;
+    }
+}
+</script>
+<div class="container">
+    <img src="hackberry.jpg" height="200" width="200"  id="image" 
+    class="img-fluid" alt="Responsive image"/>
+    <img src="oak tree.jpg"  height="200" width="200"  id="image"
+    class="img-fluid" alt="Responsive image" />
+   <img src="Talium.ipg.jpg" height="200" width="200" id="image"
+        class="img-fluid" alt="Responsive image" />
+        <br>
+        <input type="button" onclick="rotateImage()" value="Select Image">
+    </div>
+    
+<script>
+    var currentImage=0;
+    function rotateImage(){
+       
+        var Image_Id = document.getElementById('image');
+        switch(currentImage){
+            case 0:
+            Image_Id.src = "hackberry.jpg ";
+            currentImage++;
+            break;
+ 
+            case 1:
+            Image_Id.src = "Talium.ipg.jpg";
+            currentImage++;
+            break;
+            case 2:
+            Image_Id.src = "oak tree.jpg";
+            currentImage++;
+            break;
+            
+        }
+            
+        }        
+    
+</script>
+</script>
 </body>
 </html> 
 
